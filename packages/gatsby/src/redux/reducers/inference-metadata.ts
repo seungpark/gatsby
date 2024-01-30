@@ -98,6 +98,11 @@ const incrementalReducer = (
       // Marking parent type as dirty so that it rebuilds
       const { type } = action.payload.internal
       state[type].dirty = true
+      console.log(`ADD_CHILD_NODE_TO_PARENT_NODE`)
+      console.log(`action.payload`);
+      console.log(JSON.stringify(action.payload));
+      console.log(`state`);
+      console.log(JSON.stringify(state));
       return state
     }
 
